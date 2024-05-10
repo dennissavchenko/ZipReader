@@ -1,4 +1,5 @@
 import zipfile
+import pyminizip
 import time
 import hashlib
 import zlib
@@ -6,6 +7,7 @@ import shutil
 import requests
 import PyPDF2
 import re
+import os
 from tabulate import tabulate
 
 
@@ -123,6 +125,7 @@ def process_files_inside(zip_file):
         elif filename.endswith(".pdf"):
             keywords_info[filename] = keyword_rapport_pdf("files/extracted_files/" + filename)
     write_report(files, keywords_info)
+    rapport_hash()
 
 
 # Logs text to the log.txt file and returns the logged text
@@ -149,6 +152,13 @@ def delete_folder(folder_path):
 def rapport_hash():
     with open('files/hash.txt', 'w') as f:
         f.write(generate_checksum('files/hash.txt'))
+
+
+def pack_zip():
+    files = ["files/report.txt", "files/hash.txt"]
+    for file in os.listdir("files/extracted_files"):
+        files.append("files/extracted_files/" + file)
+    pyminizip.compress_multiple(files, [], "new_zipfile.zip", "P4$$w0rd!", 5)
 
 
 def read_zip(file_path):
@@ -185,7 +195,7 @@ def read_zip(file_path):
                                 # Printing correct password and time it took to find the work in 10k-most-common.txt
                                 print(log('Password for the ZIP file: ' + line.strip() + ' (found in ' + str(round(time.time() - start_time, 2)) + ' seconds)'))
                                 process_files_inside(zip_file)
-                                rapport_hash()
+                                pack_zip()
                                 break
                             except (RuntimeError, zlib.error):
                                 pass
