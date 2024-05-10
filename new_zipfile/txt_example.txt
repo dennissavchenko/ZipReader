@@ -1,0 +1,34 @@
+Report summary: 
+
+FILE STATUS RAPORT
+
+File name				checksum (sha-256)												result
+
+File_name1			17a659d3b09299481c7df52daf5fe3b8930a157b6139ebe5a1d8bdc0c2f3d7f4	result_from_virustotal
+File_name2			17a659d3b09299481c7df52daf5fe3b8930a157b6139ebe5a1d8bdc0c2f3d7f4	result_from_virustotal
+
+================================================================================================================
+
+KEYWORODS RAPORT
+
+File_name_1
+
+Keywoords				occurrence
+PASSWORD					20
+PESEL						5
+
+Uniq e-mails:
+aaa@bbb.com
+bbb@ccc.com
+
+
+File_name_2
+
+Keywoords				occurrence
+PASSWORD					70
+PESEL						23
+
+Uniq e-mails:
+aaa@bbb.com
+bbb@ccc.com
+
