@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="Project was created">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="Test files">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714300289083</updated>
       <workItem from="1714300291848" duration="21540000" />
-      <workItem from="1715348868803" duration="7828000" />
+      <workItem from="1715348868803" duration="11391000" />
     </task>
     <task id="LOCAL-00001" summary="Project was created">
       <option name="closed" value="true" />
@@ -183,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714300468558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Project was created">
+      <option name="closed" value="true" />
+      <created>1715378417501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715378417501</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test files">
+      <option name="closed" value="true" />
+      <created>1715378482505</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715378482505</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,12 +206,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project was created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project was created" />
+    <MESSAGE value="Test files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ZipReader$web.coverage" NAME="web Coverage Results" MODIFIED="1715377431757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
-    <SUITE FILE_PATH="coverage/ZipReader$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1715378104413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ZipReader$main.coverage" NAME="main Coverage Results" MODIFIED="1715377905896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1715381670002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$main.coverage" NAME="main Coverage Results" MODIFIED="1715378345504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ZipReader$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1715361622836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
   </component>
 </project>
