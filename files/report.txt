@@ -1,0 +1,24 @@
+FILE STATUS RAPPORT
+
+File name                 Checksum (sha256)                                                 Result
+------------------------  ----------------------------------------------------------------  ----------
+eicar_com.zip             2546dcffc5ad854d4ddc64fbf056871cd5a00f2471cb7a5bfd4ac23b6e9eedad  malicious
+file3.docx                9e626b5aac1604f34c40c5c89243bc8367c531d569dbb031ab2bab03c20ced8d  undetected
+file_example_MP3_1MG.mp3  90ce3b7c9dfcce6aafcb2dcfc3fc496dab6ba8106b61531b05d2c57a4be1640e  undetected
+txt_example.txt           ca702055d90c0a54d338980b5c090f679b1ef0855b192e3c6add6c8525ff87e1  undetected
+
+====================================================================================================
+
+KEYWORDS RAPPORT
+
+txt_example.txt
+
+Keyword      Occurrence
+---------  ------------
+PESEL                 2
+PASSWORD              2
+
+Unique emails:
+aaa@bbb.com
+bbb@ccc.com
+

@@ -1,0 +1,7 @@
+File is encrypted. Looking for the password!
+Password for the ZIP file: password (found in 0.78 seconds)
+Files extracted from the ZIP file: 
+eicar_com.zip
+file3.docx
+file_example_MP3_1MG.mp3
+txt_example.txt
