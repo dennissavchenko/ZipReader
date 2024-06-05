@@ -1,6 +1,6 @@
-**Title: Zip File Analysis and Processing Tool**
+#Title: Zip File Analysis and Processing Tool
 
-**Description:**
+##Description:
 This Python script provides a comprehensive solution for analyzing and processing ZIP files. Whether your ZIP file is password-protected or not, this tool has you covered. It efficiently handles password detection from a list of commonly used passwords and unpacks the ZIP file to extract its contents. Once extracted, it generates a detailed report containing file names, checksums, and VirusTotal analysis results for each file. Moreover, it intelligently scans text and PDF files for keywords and unique email addresses.
 
 After generating the report, the tool saves its checksum for verification purposes. Additionally, it compresses all extracted files, along with the report and checksum, into a new password-protected ZIP file. To enhance security, a password clue image is created using steganography, concealing the password hint within a random image fetched from the Unsplash API.
