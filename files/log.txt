@@ -1,2 +1,10 @@
 File is encrypted. Looking for the password!
-Password was not found.
+Password for the ZIP file: password (found in 0.78 seconds)
+Files extracted from the ZIP file: 
+<> txt_example.txt
+<> file3.docx
+<> eicar_com.zip
+<> file_example_MP3_1MG.mp3
+Report is done!
+Report checksum was generated!
+All necessary files were compressed!

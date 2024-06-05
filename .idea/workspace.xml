@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="new_zipfile">
-      <change afterPath="$PROJECT_DIR$/random_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/steganography.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ZipReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ZipReader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ezyzip.zip" beforeDir="false" afterPath="$PROJECT_DIR$/ezyzip.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/10k-most-common.txt" beforeDir="false" afterPath="$PROJECT_DIR$/10k-most-common.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/extracted_files/eicar_com.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/extracted_files/file3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/extracted_files/file_example_MP3_1MG.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/extracted_files/txt_example.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/hash.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/zipfile.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_zipfile.zip" beforeDir="false" afterPath="$PROJECT_DIR$/new_zipfile.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zipfile.zip" beforeDir="false" afterPath="$PROJECT_DIR$/zipfile.zip" afterDir="false" />
-    </list>
+    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="Minor changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "dennissavchenko"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/dennissavchenko/ZipReader.git",
+    "accountId": "782eda87-1b2c-49f3-a696-73a79204b59b"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -230,7 +219,7 @@
       <workItem from="1715348868803" duration="11741000" />
       <workItem from="1715676667778" duration="239000" />
       <workItem from="1715856557122" duration="2503000" />
-      <workItem from="1717514548286" duration="19635000" />
+      <workItem from="1717514548286" duration="20024000" />
     </task>
     <task id="LOCAL-00001" summary="Project was created">
       <option name="closed" value="true" />
@@ -280,7 +269,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715381854990</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Project is completed">
+      <option name="closed" value="true" />
+      <created>1717594453327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594453327</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Password Clue">
+      <option name="closed" value="true" />
+      <created>1717594500550</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594500550</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Minor changes">
+      <option name="closed" value="true" />
+      <created>1717594602134</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594602134</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +303,10 @@
     <MESSAGE value="Project was created" />
     <MESSAGE value="Test files" />
     <MESSAGE value="new_zipfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_zipfile" />
+    <MESSAGE value="Project is completed" />
+    <MESSAGE value="Password Clue" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ZipReader$steganography.coverage" NAME="steganography Coverage Results" MODIFIED="1717588713105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

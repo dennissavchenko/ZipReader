@@ -235,4 +235,4 @@ def read_zip(file_path):
         return False
 
 
-read_zip('new_zipfile.zip')
+read_zip('zipfile.zip')

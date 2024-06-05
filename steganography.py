@@ -10,7 +10,7 @@ def encode_message(image, message):
         img = img.convert("RGB")
         encoded_img = stepic.encode(img, message.encode())
         encoded_img.save('password_clue.png')
-        os.remove('new_image.jpg')
+        os.remove(image)
         print("You now can find steganography with the new ZIP file password clue!")
     except Exception as e:
         print(f"Error: {str(e)}")
