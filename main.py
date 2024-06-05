@@ -9,6 +9,8 @@ import PyPDF2
 import re
 import os
 from tabulate import tabulate
+from steganography import encode_message, decode_message
+from random_image import generate_random_photo
 
 
 def query_virustotal(file_hash):
@@ -40,7 +42,8 @@ def write_report(files, keywords):
     with open('files/report.txt', 'w') as f:
         f.write('FILE STATUS RAPPORT\n\n')
         f.write(tabulate(files, headers=file_status_rapport))
-        f.write("\n\n====================================================================================================\n\n")
+        f.write(
+            "\n\n=================================================================================================\n\n")
         f.write('KEYWORDS RAPPORT\n\n')
         for key in keywords.keys():
             f.write(key + "\n\n")
@@ -49,36 +52,40 @@ def write_report(files, keywords):
             for email in keywords[key][-1]:
                 f.write(email + '\n')
             f.write('\n')
+    print(log("Report is done!"))
 
 
+# Checking if a string is an email
 def is_email(word):
     email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(email_pattern, word) is not None
 
 
+# Generating keywords rapport for pdf file
 def keyword_rapport_pdf(file_name):
-        text = ""
-        data = []
-        emails = []
-        pesel = 0
-        password = 0
-        with open(file_name, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            for page in reader.pages:
-                text += page.extract_text() + " "
-            for word in text.split():
-                if word.lower() == 'pesel':
-                    pesel += 1
-                if word.lower() == 'password':
-                    password += 1
-                if is_email(word) and emails.count(word) == 0:
-                    emails.append(word)
-            data.append(["PESEL", str(pesel)])
-            data.append(["PASSWORD", str(password)])
-            data.append(emails)
-        return data
+    text = ""
+    data = []
+    emails = []
+    pesel = 0
+    password = 0
+    with open(file_name, 'rb') as file:
+        reader = PyPDF2.PdfReader(file)
+        for page in reader.pages:
+            text += page.extract_text() + " "
+        for word in text.split():
+            if word.lower() == 'pesel':
+                pesel += 1
+            if word.lower() == 'password':
+                password += 1
+            if is_email(word) and emails.count(word) == 0:
+                emails.append(word)
+        data.append(["PESEL", str(pesel)])
+        data.append(["PASSWORD", str(password)])
+        data.append(emails)
+    return data
 
 
+# Generating keywords rapport for txt file
 def keyword_rapport_txt(file_name):
     with open(file_name, 'r') as f:
         data = []
@@ -100,30 +107,40 @@ def keyword_rapport_txt(file_name):
 
 
 # The method lists names of files that were found in a ZIP file
-def process_files_inside(zip_file):
+def process_extracted_files():
     print(log("Files extracted from the ZIP file: "))
     files = []
     keywords_info = {}
-    for filename in zip_file.namelist():
+    # Going through the extracted files from the zip
+    for filename in os.listdir('files/extracted_files'):
         file_info = []
-        print(log(filename))
-        file_info.append(filename)
-        checksum = generate_checksum("files/extracted_files/" + filename)
-        file_info.append(checksum)
-        result = query_virustotal(checksum)
-        if result == 404:
-            file_info.append('unknown')
+        # Checking if the file is a directory
+        if os.path.isdir("files/extracted_files/" + filename):
+            print(log(filename + " (directory)"))
         else:
-            dictionary = {}
-            for key in result['data']['attributes']['last_analysis_results'].keys():
-                d_key = result['data']['attributes']['last_analysis_results'][key]['category']
-                dictionary[d_key] = dictionary.get(d_key, 0) + 1
-            file_info.append(max(dictionary, key=dictionary.get))
-        files.append(file_info)
-        if filename.endswith(".txt"):
-            keywords_info[filename] = keyword_rapport_txt("files/extracted_files/" + filename)
-        elif filename.endswith(".pdf"):
-            keywords_info[filename] = keyword_rapport_pdf("files/extracted_files/" + filename)
+            print(log('<> ' + filename))
+            file_info.append(filename)
+            # Generating checksome for current file
+            checksum = generate_checksum("files/extracted_files/" + filename)
+            file_info.append(checksum)
+            # Querying virustotal for the file analysis
+            result = query_virustotal(checksum)
+            if result == 404:
+                # In case file was not found on virustotal, result is 'unknown'
+                file_info.append('unknown')
+            else:
+                # In case file was found, result is the most common classification of the file
+                dictionary = {}
+                for key in result['data']['attributes']['last_analysis_results'].keys():
+                    d_key = result['data']['attributes']['last_analysis_results'][key]['category']
+                    dictionary[d_key] = dictionary.get(d_key, 0) + 1
+                file_info.append(max(dictionary, key=dictionary.get))
+            files.append(file_info)
+            # Looking for keywords in .txt or .pdf files
+            if filename.endswith(".txt"):
+                keywords_info[filename] = keyword_rapport_txt("files/extracted_files/" + filename)
+            elif filename.endswith(".pdf"):
+                keywords_info[filename] = keyword_rapport_pdf("files/extracted_files/" + filename)
     write_report(files, keywords_info)
     rapport_hash()
 
@@ -136,8 +153,12 @@ def log(text):
 
 
 # Clearing log from previous usages
-def clear_log():
+def clear_files():
     with open('files/log.txt', 'w') as f:
+        f.write('')
+    with open('files/report.txt', 'w') as f:
+        f.write('')
+    with open('files/hash.txt', 'w') as f:
         f.write('')
 
 
@@ -150,22 +171,30 @@ def delete_folder(folder_path):
 
 
 def rapport_hash():
-    with open('files/hash.txt', 'w') as f:
-        f.write(generate_checksum('files/hash.txt'))
+    if os.path.exists("files/report.txt"):
+        with open('files/hash.txt', 'w') as f:
+            f.write(generate_checksum('files/report.txt'))
+        print(log("Report checksum was generated!"))
 
 
 def pack_zip():
     files = ["files/report.txt", "files/hash.txt"]
     for file in os.listdir("files/extracted_files"):
-        files.append("files/extracted_files/" + file)
-    pyminizip.compress_multiple(files, [], "new_zipfile.zip", "P4$$w0rd!", 5)
+        if not os.path.isdir("files/extracted_files/" + file):
+            files.append("files/extracted_files/" + file)
+    try:
+        pyminizip.compress_multiple(files, [], "new_zipfile.zip", "P4$$w0rd!", 5)
+        print(log("All necessary files were compressed!"))
+        image = generate_random_photo()
+        encode_message(image, 'Password for the new ZIP file is P4$$w0rd!')
+        print('Hidden message:', decode_message('password_clue.png'))
+    except OSError as e:
+        print(log("Error occurred: " + str(e)))
 
 
 def read_zip(file_path):
-    # Clearing the log.txt from the previous usage
-    clear_log()
     # Deleting folder executed_files from the previous usage
-    delete_folder("files/extracted_files")
+    delete_folder("files")
     # Checking if the file exists and is a ZIP file
     if zipfile.is_zipfile(file_path):
         # Opening the ZIP file
@@ -174,7 +203,9 @@ def read_zip(file_path):
             try:
                 zip_file.extractall(path="files/extracted_files")
                 print(log("The ZIP file has no password!"))
-                process_files_inside(zip_file)
+                process_extracted_files()
+                pack_zip()
+                return True
             # In case the file is protected an error is thrown
             except RuntimeError as e:
                 # Error says that file is encrypted. Start looking for a password
@@ -184,7 +215,7 @@ def read_zip(file_path):
                     # Start time of password searching procedure
                     start_time = time.time()
                     # Opening the 10k-most-common passwords file
-                    with open('files/10k-most-common.txt', 'r') as file:
+                    with open('10k-most-common.txt', 'r') as file:
                         for line in file:
                             # Setting password one by one
                             zip_file.setpassword(line.strip().encode('utf-8'))
@@ -193,18 +224,25 @@ def read_zip(file_path):
                                 zip_file.extractall(path="files/extracted_files")
                                 password_found = True
                                 # Printing correct password and time it took to find the work in 10k-most-common.txt
-                                print(log('Password for the ZIP file: ' + line.strip() + ' (found in ' + str(round(time.time() - start_time, 2)) + ' seconds)'))
-                                process_files_inside(zip_file)
+                                print(log('Password for the ZIP file: ' + line.strip() + ' (found in ' + str(
+                                    round(time.time() - start_time, 2)) + ' seconds)'))
+                                process_extracted_files()
                                 pack_zip()
                                 break
-                            except (RuntimeError, zlib.error):
+                            except (RuntimeError, zlib.error, zipfile.BadZipfile):
                                 pass
                     if not password_found:
                         print(log("Password was not found."))
+                        delete_folder("files/extracted_files")
+                        return False
+                    else:
+                        return True
                 else:
                     print(log("Unexpected error"))
+                    return False
     else:
         print(log("The file does not exist or is not a ZIP file."))
+        return False
 
 
-read_zip('zipfile.zip')
+read_zip('new_zipfile.zip')

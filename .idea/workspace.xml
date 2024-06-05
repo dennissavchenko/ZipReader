@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="Test files">
+    <list default="true" id="15fc67a3-177d-4f6f-9756-694f05606c9b" name="Changes" comment="new_zipfile">
+      <change afterPath="$PROJECT_DIR$/random_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/steganography.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ZipReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ZipReader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ezyzip.zip" beforeDir="false" afterPath="$PROJECT_DIR$/ezyzip.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/10k-most-common.txt" beforeDir="false" afterPath="$PROJECT_DIR$/10k-most-common.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/extracted_files/eicar_com.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/extracted_files/file3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/extracted_files/file_example_MP3_1MG.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/extracted_files/txt_example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/hash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/zipfile.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_zipfile.zip" beforeDir="false" afterPath="$PROJECT_DIR$/new_zipfile.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipfile.zip" beforeDir="false" afterPath="$PROJECT_DIR$/zipfile.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -35,11 +59,14 @@
   "keyToString": {
     "Python.main (1).executor": "Run",
     "Python.main.executor": "Run",
+    "Python.random_image.executor": "Run",
+    "Python.steganography.executor": "Run",
     "Python.t2.executor": "Run",
     "Python.web.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/dennissavchenko/Documents/second/PPY/ZipReader",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +76,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.venv" />
@@ -94,6 +124,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="random_image" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ZipReader" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_image.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,6 +204,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.random_image" />
         <item itemvalue="Python.web" />
         <item itemvalue="Python.t2" />
       </list>
@@ -159,7 +213,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -172,7 +227,10 @@
       <option name="presentableId" value="Default" />
       <updated>1714300289083</updated>
       <workItem from="1714300291848" duration="21540000" />
-      <workItem from="1715348868803" duration="11391000" />
+      <workItem from="1715348868803" duration="11741000" />
+      <workItem from="1715676667778" duration="239000" />
+      <workItem from="1715856557122" duration="2503000" />
+      <workItem from="1717514548286" duration="19635000" />
     </task>
     <task id="LOCAL-00001" summary="Project was created">
       <option name="closed" value="true" />
@@ -198,7 +256,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715378482505</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new_zipfile">
+      <option name="closed" value="true" />
+      <created>1715381741658</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715381741658</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new_zipfile">
+      <option name="closed" value="true" />
+      <created>1715381820756</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715381820756</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new_zipfile">
+      <option name="closed" value="true" />
+      <created>1715381854990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715381854990</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,12 +289,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project was created" />
     <MESSAGE value="Test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test files" />
+    <MESSAGE value="new_zipfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="new_zipfile" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ZipReader$web.coverage" NAME="web Coverage Results" MODIFIED="1715377431757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
-    <SUITE FILE_PATH="coverage/ZipReader$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1715381670002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ZipReader$main.coverage" NAME="main Coverage Results" MODIFIED="1715378345504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$steganography.coverage" NAME="steganography Coverage Results" MODIFIED="1717588713105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ZipReader$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1715361622836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/ZipReader$random_image.coverage" NAME="random_image Coverage Results" MODIFIED="1717587873133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1717594433989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$web.coverage" NAME="web Coverage Results" MODIFIED="1717594296393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ZipReader$main.coverage" NAME="main Coverage Results" MODIFIED="1717594311758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
