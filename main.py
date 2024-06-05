@@ -152,16 +152,6 @@ def log(text):
     return text
 
 
-# Clearing log from previous usages
-def clear_files():
-    with open('files/log.txt', 'w') as f:
-        f.write('')
-    with open('files/report.txt', 'w') as f:
-        f.write('')
-    with open('files/hash.txt', 'w') as f:
-        f.write('')
-
-
 # Deleting folder executed_files from the previous usage
 def delete_folder(folder_path):
     try:
